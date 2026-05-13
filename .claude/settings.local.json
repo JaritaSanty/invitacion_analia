@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(qlmanage -t -s 1200 -o images/ images/preview.svg)",
+      "Bash(sips -Z 1200 -s format jpeg -s formatOptions 85 images/preview.png --out images/preview.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight images/preview.jpg)"
+    ]
+  }
+}

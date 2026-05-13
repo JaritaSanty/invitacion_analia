@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+    <defs>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Great+Vibes&amp;family=Pinyon+Script&amp;family=Cinzel:wght@400;500&amp;display=swap');
+            .font-display { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; }
+            .font-script  { font-family: 'Great Vibes', 'Apple Chancery', cursive; font-weight: 400; }
+            .font-name    { font-family: 'Pinyon Script', 'Great Vibes', cursive; font-weight: 400; }
+            .font-caps    { font-family: 'Cinzel', Georgia, serif; font-weight: 500; letter-spacing: 12px; }
+            .italic       { font-style: italic; }
+        </style>
+        <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#fbf5e8" />
+            <stop offset="0.5" stop-color="#f4ecdf" />
+            <stop offset="1" stop-color="#ead9c0" />
+        </linearGradient>
+        <radialGradient id="warmGlow" cx="50%" cy="35%" r="55%">
+            <stop offset="0" stop-color="#d9a6a6" stop-opacity="0.18" />
+            <stop offset="1" stop-color="#d9a6a6" stop-opacity="0" />
+        </radialGradient>
+        <radialGradient id="vignette" cx="50%" cy="50%" r="60%">
+            <stop offset="55%" stop-color="#5e482e" stop-opacity="0" />
+            <stop offset="100%" stop-color="#5e482e" stop-opacity="0.22" />
+        </radialGradient>
+    </defs>
+
+    <!-- Fondo -->
+    <rect width="1200" height="1200" fill="url(#paper)" />
+    <rect width="1200" height="1200" fill="url(#warmGlow)" />
+    <rect width="1200" height="1200" fill="url(#vignette)" />
+
+    <!-- Marco doble dorado -->
+    <rect x="44" y="44" width="1112" height="1112" fill="none" stroke="#a08456" stroke-width="2" opacity="0.85" />
+    <rect x="64" y="64" width="1072" height="1072" fill="none" stroke="#a08456" stroke-width="1" opacity="0.45" />
+
+    <!-- Diamantes en esquinas -->
+    <g fill="#a08456">
+        <path d="M54 44 L64 54 L54 64 L44 54 Z" />
+        <path d="M1146 44 L1156 54 L1146 64 L1136 54 Z" />
+        <path d="M54 1136 L64 1146 L54 1156 L44 1146 Z" />
+        <path d="M1146 1136 L1156 1146 L1146 1156 L1136 1146 Z" />
+    </g>
+
+    <!-- Corona ornamental superior -->
+    <g transform="translate(560 130) scale(1.2)" stroke="#a08456" stroke-width="1.4" fill="none" stroke-linecap="round">
+        <path d="M40 14 L40 50 M28 26 L52 26" />
+        <circle cx="40" cy="38" r="2.6" fill="#a08456" />
+        <path d="M40 8 L40 2 M28 10 L24 4 M52 10 L56 4 M18 18 L12 14 M62 18 L68 14" opacity="0.5" />
+        <path d="M14 56 Q22 52 30 56" />
+        <ellipse cx="18" cy="55" rx="3" ry="1.4" transform="rotate(-25 18 55)" fill="#a08456" opacity="0.7" />
+        <ellipse cx="24" cy="53" rx="3" ry="1.4" transform="rotate(-15 24 53)" fill="#a08456" opacity="0.7" />
+        <ellipse cx="28" cy="55" rx="3" ry="1.4" transform="rotate(10 28 55)" fill="#a08456" opacity="0.7" />
+        <path d="M50 56 Q58 52 66 56" />
+        <ellipse cx="52" cy="55" rx="3" ry="1.4" transform="rotate(-10 52 55)" fill="#a08456" opacity="0.7" />
+        <ellipse cx="56" cy="53" rx="3" ry="1.4" transform="rotate(15 56 53)" fill="#a08456" opacity="0.7" />
+        <ellipse cx="62" cy="55" rx="3" ry="1.4" transform="rotate(25 62 55)" fill="#a08456" opacity="0.7" />
+    </g>
+
+    <!-- Fecha -->
+    <text x="600" y="310" class="font-caps" font-size="32" text-anchor="middle" fill="#6f5832">23 · MAYO · 2026</text>
+
+    <!-- Pequeñas líneas decorativas a los lados de la fecha -->
+    <g stroke="#a08456" stroke-width="1" opacity="0.7">
+        <line x1="280" y1="300" x2="380" y2="300" />
+        <line x1="820" y1="300" x2="920" y2="300" />
+    </g>
+
+    <!-- PRIMERA (display serif) -->
+    <text x="600" y="470" class="font-display" font-size="170" text-anchor="middle" fill="#2a221c">Primera</text>
+
+    <!-- Comunión (cursiva) -->
+    <text x="600" y="650" class="font-script" font-size="200" text-anchor="middle" fill="#8b4d4d">Comunión</text>
+
+    <!-- Floritura divisora -->
+    <g transform="translate(420 740)" stroke="#a08456" stroke-width="1.4" fill="none" stroke-linecap="round">
+        <path d="M0 6 L120 6" />
+        <path d="M120 6 Q132 -4 144 6 Q156 16 168 6" />
+        <path d="M192 6 Q204 -4 216 6 Q228 16 240 6" />
+        <path d="M240 6 L360 6" />
+        <circle cx="180" cy="6" r="4" fill="#a08456" />
+        <circle cx="180" cy="6" r="8" stroke="#a08456" fill="none" />
+    </g>
+
+    <!-- "de" -->
+    <text x="600" y="830" class="font-display italic" font-size="40" text-anchor="middle" fill="#5b4d42">de</text>
+
+    <!-- Nombre de la celebrante -->
+    <text x="600" y="960" class="font-name" font-size="110" text-anchor="middle" fill="#8b4d4d">Emily Analia</text>
+    <text x="600" y="1060" class="font-name" font-size="110" text-anchor="middle" fill="#8b4d4d">Naranjo Jara</text>
+
+    <!-- Pie con versículo -->
+    <text x="600" y="1130" class="font-caps" font-size="20" text-anchor="middle" fill="#6f5832">SAN MATEO 19 · 14</text>
+</svg>
