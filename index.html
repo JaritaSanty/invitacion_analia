@@ -13,8 +13,7 @@
     <meta property="og:locale" content="es_ES">
     <meta property="og:site_name" content="Primera Comunión · Analia Naranjo">
     <meta property="og:title" content="Primera Comunión · Emily Analia">
-    <meta property="og:description"
-        content="Acompáñanos a celebrar este día tan especial · 23 de Mayo de 2026">
+    <meta property="og:description" content="Acompáñanos a celebrar este día tan especial · 23 de Mayo de 2026">
     <meta property="og:url" content="https://invitacion-analia.vercel.app/">
     <meta property="og:image" content="https://invitacion-analia.vercel.app/images/analia.jpeg">
     <meta property="og:image:secure_url" content="https://invitacion-analia.vercel.app/images/analia.jpeg">
@@ -26,8 +25,7 @@
     <!-- Twitter Card (fallback para algunas previews) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Primera Comunión · Emily Analia">
-    <meta name="twitter:description"
-        content="Acompáñanos a celebrar este día tan especial · 23 de Mayo de 2026">
+    <meta name="twitter:description" content="Acompáñanos a celebrar este día tan especial · 23 de Mayo de 2026">
     <meta name="twitter:image" content="https://invitacion-analia.vercel.app/images/analia.jpeg">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -129,6 +127,21 @@
                     los cielos»</p>
                 <cite>San Mateo 19 · 14</cite>
             </blockquote>
+
+            <div class="dedicatoria" data-personal hidden>
+                <div class="dedicatoria-orn" aria-hidden="true">
+                    <svg viewBox="0 0 60 14">
+                        <g stroke="currentColor" stroke-width="0.7" fill="none" stroke-linecap="round">
+                            <path d="M2 7 L22 7" />
+                            <path d="M22 7 Q26 3 30 7 Q34 11 38 7" />
+                            <path d="M38 7 L58 7" />
+                            <circle cx="30" cy="7" r="1.4" fill="currentColor" stroke="none" />
+                        </g>
+                    </svg>
+                </div>
+                <p class="dedicatoria-eyebrow">Con especial cariño, invitamos a</p>
+                <p class="dedicatoria-name" data-guest-name></p>
+            </div>
 
         </header>
 
@@ -253,8 +266,8 @@
             </div>
 
             <p class="eyebrow">A continuación</p>
-            <p class="place-name">[Nombre del salón]</p>
-            <p class="place-address">[Dirección del salón]</p>
+            <p class="place-name">Sala de Recepciones "El Marquez"</p>
+            <p class="place-address">Av. Manuelita Saenz y Barcelona</p>
 
             <!-- IMAGEN DEL SALÓN -->
             <figure class="place-photo">
@@ -275,7 +288,7 @@
                 </div>
             </figure>
 
-            <a href="#" class="map-link" target="_blank" rel="noopener">
+            <a href="https://maps.app.goo.gl/eYGtSDEsdNJRdy7v6" class="map-link" target="_blank" rel="noopener">
                 <span>Ver ubicación</span>
                 <svg viewBox="0 0 16 16" class="arrow">
                     <path d="M3 8 L13 8 M9 4 L13 8 L9 12" stroke="currentColor" stroke-width="1.2" fill="none"
@@ -310,8 +323,8 @@
                     </span>
 
                     <span class="plaque-text">
-                        <span class="plaque-eyebrow">Tenga la bondad de</span>
                         <span class="plaque-cta">Confirmar asistencia</span>
+                        <span class="plaque-here">— aquí —</span>
                     </span>
 
                     <span class="plaque-orn plaque-orn--right" aria-hidden="true">
@@ -408,6 +421,23 @@
         (function () {
             const WHATSAPP_NUMBER = '593987417045';
 
+            // ── Personalización por URL ──────────────────────────
+            // Soporta: ?para=... | ?invitado=... | ?guest=...
+            const params = new URLSearchParams(window.location.search);
+            const rawGuest = params.get('para') || params.get('invitado') || params.get('guest') || '';
+            const guest = rawGuest.trim().replace(/\s+/g, ' ').slice(0, 80);
+
+            if (guest) {
+                const dedicatoria = document.querySelector('[data-personal]');
+                if (dedicatoria) {
+                    dedicatoria.querySelector('[data-guest-name]').textContent = guest;
+                    dedicatoria.hidden = false;
+                }
+                const nombreInput = document.querySelector('input[name="nombre"]');
+                if (nombreInput) nombreInput.value = guest;
+            }
+
+            // ── Modal RSVP ───────────────────────────────────────
             const modal = document.getElementById('rsvpModal');
             const openBtn = document.getElementById('openRsvp');
             const form = document.getElementById('rsvpForm');
@@ -446,6 +476,7 @@
                     `*Nombre:* ${nombre}`,
                     `*Asistentes:* ${asistentes}`,
                 ];
+                if (guest && guest !== nombre) lines.push(`*Invitación dirigida a:* ${guest}`);
                 if (observacion) lines.push(`*Observación:* ${observacion}`);
 
                 const message = encodeURIComponent(lines.join('\n'));
@@ -454,6 +485,7 @@
                 closeModal();
                 form.reset();
                 form.querySelector('input[name="asistentes"]').value = 1;
+                if (guest) form.querySelector('input[name="nombre"]').value = guest;
             });
         })();
     </script>
