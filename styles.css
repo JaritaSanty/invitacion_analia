@@ -705,23 +705,49 @@ img, svg { display: block; max-width: 100%; }
 
 .time {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 14px;
-    margin-top: 8px;
+    margin-top: 18px;
 }
 
 .time-rule {
-    width: 40px;
+    width: 60px;
     height: 1px;
     background: var(--gold);
 }
 
 .time-text {
-    font-family: var(--display);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+}
+
+.time-prefix {
+    font-family: var(--body);
     font-style: italic;
+    color: var(--ink-soft);
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+}
+
+.time-hour {
+    font-family: var(--display);
+    font-size: clamp(2.6rem, 9vw, 3.4rem);
     color: var(--rose-deep);
-    font-size: 1.15rem;
+    line-height: 1;
+    letter-spacing: 0.04em;
+}
+
+.time-meta {
+    font-family: var(--body);
+    font-style: italic;
+    color: var(--ink);
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    margin-top: 4px;
 }
 
 /* ════════════════════════════════════════════════════════════
