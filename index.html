@@ -1,283 +1,395 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primera Comunión · [Nombre]</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,0..100;1,9..144,300..600,0..100&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Italiana&family=Pinyon+Script&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <!-- Motas de luz flotando -->
-    <div class="motes" id="motes" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
 
-    <main class="page">
+    <main class="invitation" role="main">
 
-        <!-- ═══════════════════════════════
-             00 · HERO — Primera Luz
-             ═══════════════════════════════ -->
-        <section class="scene scene--hero" data-scene>
-            <p class="overline">
-                <span class="dash"></span>
-                <span>Primera Comunión</span>
-                <span class="dash"></span>
-            </p>
+        <!-- ════════════════════════════════════════
+             I · FRONTISPICIO
+             ════════════════════════════════════════ -->
+        <header class="frontispiece">
 
-            <div class="halo" aria-hidden="true"></div>
-
-            <h1 class="display">
-                <span class="display-prefix">de</span>
-                <span class="display-name">[Nombre]</span>
-            </h1>
-
-            <p class="hero-stamp">
-                <span>xv</span><i></i>
-                <span>noviembre</span><i></i>
-                <span>mmxxvi</span>
-            </p>
-
-            <a href="#capitulo-01" class="scroll-cue" aria-label="Continuar">
-                <span class="scroll-text">seguí leyendo</span>
-                <span class="scroll-line"></span>
-            </a>
-        </section>
-
-        <!-- ═══════════════════════════════
-             VERSÍCULO
-             ═══════════════════════════════ -->
-        <section class="scene scene--verse" data-scene>
-            <div class="olive-flat" aria-hidden="true">
-                <svg viewBox="0 0 120 30">
-                    <g fill="none" stroke="currentColor" stroke-width="0.7">
-                        <path d="M2 15 Q60 14 118 15"/>
-                    </g>
-                    <g fill="currentColor" opacity="0.7">
-                        <ellipse cx="20" cy="10" rx="6" ry="2.2" transform="rotate(-22 20 10)"/>
-                        <ellipse cx="32" cy="20" rx="6" ry="2.2" transform="rotate(20 32 20)"/>
-                        <ellipse cx="46" cy="9" rx="7" ry="2.4" transform="rotate(-18 46 9)"/>
-                        <ellipse cx="60" cy="21" rx="7" ry="2.4" transform="rotate(22 60 21)"/>
-                        <ellipse cx="74" cy="9" rx="7" ry="2.4" transform="rotate(-18 74 9)"/>
-                        <ellipse cx="88" cy="20" rx="6" ry="2.2" transform="rotate(20 88 20)"/>
-                        <ellipse cx="100" cy="10" rx="6" ry="2.2" transform="rotate(-22 100 10)"/>
+            <div class="crown" aria-hidden="true">
+                <svg viewBox="0 0 80 80">
+                    <g fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round">
+                        <path d="M40 14 L40 50 M28 26 L52 26" />
+                        <circle cx="40" cy="38" r="2.4" fill="currentColor" />
+                        <path d="M40 8 L40 2 M28 10 L24 4 M52 10 L56 4 M18 18 L12 14 M62 18 L68 14" opacity="0.5" />
+                        <path d="M14 56 Q22 52 30 56" />
+                        <ellipse cx="18" cy="55" rx="3" ry="1.4" transform="rotate(-25 18 55)" fill="currentColor"
+                            opacity="0.7" />
+                        <ellipse cx="24" cy="53" rx="3" ry="1.4" transform="rotate(-15 24 53)" fill="currentColor"
+                            opacity="0.7" />
+                        <ellipse cx="28" cy="55" rx="3" ry="1.4" transform="rotate(10 28 55)" fill="currentColor"
+                            opacity="0.7" />
+                        <path d="M50 56 Q58 52 66 56" />
+                        <ellipse cx="52" cy="55" rx="3" ry="1.4" transform="rotate(-10 52 55)" fill="currentColor"
+                            opacity="0.7" />
+                        <ellipse cx="56" cy="53" rx="3" ry="1.4" transform="rotate(15 56 53)" fill="currentColor"
+                            opacity="0.7" />
+                        <ellipse cx="62" cy="55" rx="3" ry="1.4" transform="rotate(25 62 55)" fill="currentColor"
+                            opacity="0.7" />
                     </g>
                 </svg>
             </div>
 
-            <p class="verse">
-                <em>Dejad</em> que los niños<br>
-                vengan <em>a mí</em>, porque<br>
-                de los tales <em>es el reino</em><br>
-                de los cielos
-            </p>
+            <p class="anno">— 23 · Mayo · 2026 —</p>
 
-            <p class="verse-cite">San Mateo 19 · 14</p>
-        </section>
+            <h1 class="opus">
+                <span class="opus-line">Primera</span>
+                <span class="opus-line opus-line--alt">Comunión</span>
+            </h1>
 
-        <!-- ═══════════════════════════════
-             01 · EL DÍA
-             ═══════════════════════════════ -->
-        <section id="capitulo-01" class="scene scene--date" data-scene>
-            <header class="scene-head">
-                <span class="scene-num">— 01 —</span>
-                <span class="scene-label">El día</span>
-            </header>
-
-            <div class="date-poetry">
-                <span class="dp-dow">sábado</span>
-                <span class="dp-day">15</span>
-                <span class="dp-month"><em>de</em> noviembre</span>
-                <span class="dp-year">mmxxvi</span>
+            <div class="frontis-rule" aria-hidden="true">
+                <svg viewBox="0 0 240 24">
+                    <g stroke="currentColor" fill="none" stroke-width="0.7" stroke-linecap="round">
+                        <path d="M10 12 Q40 12 70 12" />
+                        <path d="M70 12 Q78 6 86 12 Q94 18 102 12" />
+                        <path d="M170 12 Q178 6 186 12 Q194 18 202 12" opacity="0" />
+                        <path d="M138 12 Q146 6 154 12 Q162 18 170 12" />
+                        <path d="M170 12 Q200 12 230 12" />
+                        <circle cx="120" cy="12" r="2.4" fill="currentColor" stroke="none" />
+                        <circle cx="120" cy="12" r="4.5" />
+                        <path d="M110 12 L115 12 M125 12 L130 12" opacity="0.6" />
+                    </g>
+                </svg>
             </div>
 
-            <div class="time-row">
+            <p class="celebrant">de</p>
+            <p class="name">Emily Analia Naranjo Jara</p>
+
+            <!-- RETRATO PRINCIPAL (foto de la niña) -->
+            <figure class="portrait portrait--hero">
+                <div class="portrait-arch">
+                    <div class="portrait-img-wrap">
+                        <img src="images/portrait.jpg" alt="[Nombre]"
+                            onerror="this.parentElement.classList.add('is-empty'); this.remove();">
+                        <div class="portrait-placeholder" aria-hidden="true">
+                            <svg viewBox="0 0 80 110">
+                                <g fill="none" stroke="currentColor" stroke-width="0.7">
+                                    <circle cx="40" cy="38" r="14" />
+                                    <path d="M18 96 Q18 70 40 70 Q62 70 62 96" />
+                                </g>
+                            </svg>
+                            <span>fotografía<br>aquí</span>
+                        </div>
+                    </div>
+                </div>
+                <figcaption class="portrait-caption">
+                    <span class="portrait-line"></span>
+                    <span>en su primer día</span>
+                    <span class="portrait-line"></span>
+                </figcaption>
+            </figure>
+
+            <blockquote class="verse">
+                <p><span class="drop-cap">«D</span>ejad que los niños vengan a mí, porque de los tales es el reino de
+                    los cielos»</p>
+                <cite>San Mateo 19 · 14</cite>
+            </blockquote>
+
+        </header>
+
+        <!-- ════════════════════════════════════════
+             II · EL DÍA
+             ════════════════════════════════════════ -->
+        <section class="chapter chapter--date">
+            <div class="chapter-mark">
+                <span class="mark-num">I</span>
+                <span class="mark-label">El Día</span>
+            </div>
+
+            <div class="date-spec">
+                <p class="weekday">Sábado</p>
+                <p class="numeral">23</p>
+                <p class="month">de Mayo</p>
+                <p class="year-long">del año dos mil veintiséis</p>
+            </div>
+
+            <div class="time">
                 <span class="time-rule"></span>
-                <span class="time-text"><em>cinco</em> de la tarde</span>
+                <span class="time-text">a las 11:00 de la mañana</span>
                 <span class="time-rule"></span>
             </div>
         </section>
 
-        <!-- ═══════════════════════════════
-             02 · CEREMONIA
-             ═══════════════════════════════ -->
-        <section class="scene scene--place" data-scene>
-            <header class="scene-head">
-                <span class="scene-num">— 02 —</span>
-                <span class="scene-label">La ceremonia</span>
-            </header>
+        <!-- ════════════════════════════════════════
+             III · LA CEREMONIA
+             ════════════════════════════════════════ -->
+        <section class="chapter chapter--ceremony">
+            <div class="chapter-mark">
+                <span class="mark-num">II</span>
+                <span class="mark-label">La Ceremonia</span>
+            </div>
+
+            <div class="chapter-ornament" aria-hidden="true">
+                <svg viewBox="0 0 100 100">
+                    <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="50" cy="22" r="11" />
+                        <path d="M50 14 L50 30 M42 22 L58 22" stroke-width="0.7" />
+                        <g opacity="0.4" stroke-width="0.5">
+                            <line x1="50" y1="6" x2="50" y2="2" />
+                            <line x1="38" y1="10" x2="34" y2="6" />
+                            <line x1="62" y1="10" x2="66" y2="6" />
+                            <line x1="30" y1="22" x2="26" y2="22" />
+                            <line x1="70" y1="22" x2="74" y2="22" />
+                        </g>
+                        <path d="M36 38 L64 38 L60 56 Q56 62 50 62 Q44 62 40 56 Z" />
+                        <line x1="50" y1="62" x2="50" y2="78" />
+                        <ellipse cx="50" cy="80" rx="2.5" ry="1.4" fill="currentColor" />
+                        <path d="M38 86 L62 86" stroke-width="1.2" />
+                        <path d="M36 38 Q50 42 64 38" opacity="0.5" />
+                    </g>
+                </svg>
+            </div>
 
             <p class="eyebrow">Santa Misa</p>
-            <h2 class="place">[Nombre de la iglesia]</h2>
-            <p class="place-addr">[Dirección de la iglesia, ciudad]</p>
+            <p class="place-name">Unidad Educativa Santo Domingo de Guzmán</p>
+            <p class="place-address">Av. Los Guaytambos y Higos</p>
 
-            <a href="#" class="long-link" target="_blank" rel="noopener">
-                <span>ver ubicación</span>
-                <span class="long-arrow" aria-hidden="true">
-                    <span class="arrow-line"></span>
-                    <svg viewBox="0 0 14 12"><path d="M1 6 L13 6 M8 1 L13 6 L8 11" stroke="currentColor" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </span>
+            <a href="#" class="map-link" target="_blank" rel="noopener">
+                <span>Ver ubicación</span>
+                <svg viewBox="0 0 16 16" class="arrow">
+                    <path d="M3 8 L13 8 M9 4 L13 8 L9 12" stroke="currentColor" stroke-width="1.2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
             </a>
+
+            <aside class="ceremony-note" role="note">
+                <span class="note-label">Nota</span>
+                <p>
+                    Por disposición de la institución, solo los <strong>padres de la celebrante</strong>
+                    podrán acompañarla durante la ceremonia. Los demás invitados están cordialmente
+                    invitados a dirigirse directamente a la recepción.
+                </p>
+            </aside>
         </section>
 
-        <!-- ═══════════════════════════════
-             03 · CELEBRACIÓN
-             ═══════════════════════════════ -->
-        <section class="scene scene--place" data-scene>
-            <header class="scene-head">
-                <span class="scene-num">— 03 —</span>
-                <span class="scene-label">La celebración</span>
-            </header>
+        <!-- ════════════════════════════════════════
+             IV · LA CELEBRACIÓN
+             ════════════════════════════════════════ -->
+        <section class="chapter chapter--reception">
+            <div class="chapter-mark">
+                <span class="mark-num">III</span>
+                <span class="mark-label">La Celebración</span>
+            </div>
+
+            <div class="chapter-ornament" aria-hidden="true">
+                <svg viewBox="0 0 100 100">
+                    <g fill="none" stroke="currentColor" stroke-width="0.9" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M30 88 Q32 60 38 32" />
+                        <g transform="translate(38 32)">
+                            <ellipse cx="0" cy="0" rx="2.5" ry="5" transform="rotate(-25)" />
+                            <ellipse cx="-4" cy="6" rx="2.5" ry="5" transform="rotate(-35)" />
+                            <ellipse cx="3" cy="6" rx="2.5" ry="5" transform="rotate(-15)" />
+                            <ellipse cx="-6" cy="14" rx="2.5" ry="5" transform="rotate(-40)" />
+                            <ellipse cx="5" cy="14" rx="2.5" ry="5" transform="rotate(-10)" />
+                            <ellipse cx="-7" cy="22" rx="2.5" ry="5" transform="rotate(-45)" />
+                            <ellipse cx="6" cy="22" rx="2.5" ry="5" transform="rotate(-5)" />
+                        </g>
+                        <path d="M28 78 Q50 74 72 78 Q50 84 28 78 Z" fill="currentColor" opacity="0.15" />
+                        <path d="M28 78 Q50 74 72 78" />
+                        <path d="M28 78 Q50 84 72 78" />
+                        <path d="M70 88 Q68 70 64 50" />
+                        <g transform="translate(64 50)" fill="currentColor" opacity="0.5">
+                            <circle cx="0" cy="0" r="3" />
+                            <circle cx="5" cy="-2" r="3" />
+                            <circle cx="-5" cy="-2" r="3" />
+                            <circle cx="2" cy="-7" r="3" />
+                            <circle cx="-2" cy="-7" r="3" />
+                            <circle cx="3" cy="5" r="3" />
+                            <circle cx="-3" cy="5" r="3" />
+                            <circle cx="0" cy="10" r="3" />
+                        </g>
+                        <g transform="translate(64 50)" fill="none">
+                            <circle cx="0" cy="0" r="3" />
+                            <circle cx="5" cy="-2" r="3" />
+                            <circle cx="-5" cy="-2" r="3" />
+                            <circle cx="2" cy="-7" r="3" />
+                            <circle cx="-2" cy="-7" r="3" />
+                            <circle cx="3" cy="5" r="3" />
+                            <circle cx="-3" cy="5" r="3" />
+                            <circle cx="0" cy="10" r="3" />
+                        </g>
+                        <path d="M64 38 Q56 32 54 24 Q60 22 66 28 Q70 22 76 28 Q74 36 64 38 Z" />
+                    </g>
+                </svg>
+            </div>
 
             <p class="eyebrow">A continuación</p>
-            <h2 class="place">[Nombre del salón]</h2>
-            <p class="place-addr">[Dirección del salón, ciudad]</p>
+            <p class="place-name">[Nombre del salón]</p>
+            <p class="place-address">[Dirección del salón]</p>
 
-            <a href="#" class="long-link" target="_blank" rel="noopener">
-                <span>ver ubicación</span>
-                <span class="long-arrow" aria-hidden="true">
-                    <span class="arrow-line"></span>
-                    <svg viewBox="0 0 14 12"><path d="M1 6 L13 6 M8 1 L13 6 L8 11" stroke="currentColor" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </span>
+            <!-- IMAGEN DEL SALÓN -->
+            <figure class="place-photo">
+                <div class="photo-frame">
+                    <img src="images/salon.jpg" alt="[Nombre del salón]"
+                        onerror="this.parentElement.classList.add('is-empty'); this.remove();">
+                    <div class="photo-placeholder" aria-hidden="true">
+                        <svg viewBox="0 0 80 60">
+                            <g fill="none" stroke="currentColor" stroke-width="0.8">
+                                <path d="M10 50 L10 28 L40 12 L70 28 L70 50 Z" />
+                                <rect x="32" y="34" width="16" height="16" />
+                                <path d="M20 50 L20 40 L28 40 L28 50" />
+                                <path d="M52 50 L52 40 L60 40 L60 50" />
+                            </g>
+                        </svg>
+                        <span>imagen del salón</span>
+                    </div>
+                </div>
+            </figure>
+
+            <a href="#" class="map-link" target="_blank" rel="noopener">
+                <span>Ver ubicación</span>
+                <svg viewBox="0 0 16 16" class="arrow">
+                    <path d="M3 8 L13 8 M9 4 L13 8 L9 12" stroke="currentColor" stroke-width="1.2" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
             </a>
         </section>
 
-        <!-- ═══════════════════════════════
-             04 · RSVP
-             ═══════════════════════════════ -->
-        <section class="scene scene--rsvp" data-scene>
-            <header class="scene-head">
-                <span class="scene-num">— 04 —</span>
-                <span class="scene-label">Acompañanos</span>
-            </header>
+        <!-- ════════════════════════════════════════
+             V · CONFIRMACIÓN
+             ════════════════════════════════════════ -->
+        <section class="rsvp-section">
 
-            <p class="rsvp-quote">
-                Tu presencia hará<br>
-                <em>este día inolvidable</em>
-            </p>
+            <p class="rsvp-quote">«Su presencia es el regalo más bello que podemos recibir»</p>
 
-            <button type="button" class="long-link long-link--lg" id="openRsvp">
-                <span>Confirmar asistencia</span>
-                <span class="long-arrow" aria-hidden="true">
-                    <span class="arrow-line"></span>
-                    <svg viewBox="0 0 14 12"><path d="M1 6 L13 6 M8 1 L13 6 L8 11" stroke="currentColor" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <!-- PLACA GRABADA — botón estilo invitación victoriana -->
+            <button type="button" class="plaque" id="openRsvp" aria-label="Confirmar asistencia">
+                <span class="plaque-corner plaque-corner--tl" aria-hidden="true"></span>
+                <span class="plaque-corner plaque-corner--tr" aria-hidden="true"></span>
+                <span class="plaque-corner plaque-corner--bl" aria-hidden="true"></span>
+                <span class="plaque-corner plaque-corner--br" aria-hidden="true"></span>
+
+                <span class="plaque-inner">
+                    <span class="plaque-orn plaque-orn--left" aria-hidden="true">
+                        <svg viewBox="0 0 24 12">
+                            <g fill="currentColor">
+                                <path d="M0 6 L8 6 M8 6 Q12 2 16 6 Q12 10 8 6 Z" stroke="currentColor"
+                                    stroke-width="0.6" fill="none" />
+                                <circle cx="20" cy="6" r="1.4" />
+                            </g>
+                        </svg>
+                    </span>
+
+                    <span class="plaque-text">
+                        <span class="plaque-eyebrow">Tenga la bondad de</span>
+                        <span class="plaque-cta">Confirmar asistencia</span>
+                    </span>
+
+                    <span class="plaque-orn plaque-orn--right" aria-hidden="true">
+                        <svg viewBox="0 0 24 12">
+                            <g fill="currentColor">
+                                <circle cx="4" cy="6" r="1.4" />
+                                <path d="M8 6 Q12 2 16 6 Q12 10 8 6 Z M16 6 L24 6" stroke="currentColor"
+                                    stroke-width="0.6" fill="none" />
+                            </g>
+                        </svg>
+                    </span>
                 </span>
             </button>
 
-            <p class="deadline">— hasta el [00] de [mes] —</p>
+            <p class="rsvp-deadline">— hasta el 17 · mayo · 2026 —</p>
         </section>
 
-        <!-- ═══════════════════════════════
-             FOOTER
-             ═══════════════════════════════ -->
-        <footer class="footer" data-scene>
-            <div class="olive-flat olive-flat--sm" aria-hidden="true">
-                <svg viewBox="0 0 120 30">
-                    <g fill="none" stroke="currentColor" stroke-width="0.7">
-                        <path d="M2 15 Q60 14 118 15"/>
-                    </g>
-                    <g fill="currentColor" opacity="0.7">
-                        <ellipse cx="20" cy="10" rx="6" ry="2.2" transform="rotate(-22 20 10)"/>
-                        <ellipse cx="32" cy="20" rx="6" ry="2.2" transform="rotate(20 32 20)"/>
-                        <ellipse cx="46" cy="9" rx="7" ry="2.4" transform="rotate(-18 46 9)"/>
-                        <ellipse cx="60" cy="21" rx="7" ry="2.4" transform="rotate(22 60 21)"/>
-                        <ellipse cx="74" cy="9" rx="7" ry="2.4" transform="rotate(-18 74 9)"/>
-                        <ellipse cx="88" cy="20" rx="6" ry="2.2" transform="rotate(20 88 20)"/>
-                        <ellipse cx="100" cy="10" rx="6" ry="2.2" transform="rotate(-22 100 10)"/>
+        <!-- ════════════════════════════════════════
+             COLOFÓN
+             ════════════════════════════════════════ -->
+        <footer class="colophon">
+            <div class="colophon-ornament" aria-hidden="true">
+                <svg viewBox="0 0 200 30">
+                    <g stroke="currentColor" fill="currentColor" stroke-width="0.6">
+                        <line x1="20" y1="15" x2="80" y2="15" />
+                        <line x1="120" y1="15" x2="180" y2="15" />
+                        <g transform="translate(100 15)">
+                            <path d="M-6 0 Q-3 -5 0 0 Q3 -5 6 0 Q3 5 0 0 Q-3 5 -6 0 Z" fill="currentColor"
+                                stroke="none" />
+                        </g>
+                        <circle cx="88" cy="15" r="1" />
+                        <circle cx="112" cy="15" r="1" />
                     </g>
                 </svg>
             </div>
-            <p class="footer-line">con amor</p>
-            <p class="footer-sign">[Nombre] <em>&amp;</em> familia</p>
-            <p class="footer-coords">−2.1894°, −79.8891°  ·  ec</p>
+            <p class="colophon-text">con todo nuestro amor</p>
+            <p class="colophon-sign">Analia Naranjo &amp; familia</p>
+            <p class="colophon-finis">finis</p>
         </footer>
 
     </main>
 
-    <!-- ═══════════════════════════════
+    <!-- ════════════════════════════════════════
          MODAL DE CONFIRMACIÓN
-         ═══════════════════════════════ -->
+         ════════════════════════════════════════ -->
     <div class="modal" id="rsvpModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
         <div class="modal-overlay" data-close></div>
         <div class="modal-card">
             <button class="modal-close" type="button" data-close aria-label="Cerrar">
-                <svg viewBox="0 0 24 24"><path d="M6 6 L18 18 M18 6 L6 18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+                <svg viewBox="0 0 24 24">
+                    <path d="M6 6 L18 18 M18 6 L6 18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+                </svg>
             </button>
 
-            <p class="modal-overline">— Confirmación —</p>
-            <h3 id="modalTitle" class="modal-title">
-                Acompañanos en<br><em>este día</em>
-            </h3>
+            <p class="modal-eyebrow">Confirmación</p>
+            <h3 id="modalTitle" class="modal-title">Acompañanos<br>en este día</h3>
+            <div class="modal-rule" aria-hidden="true">
+                <svg viewBox="0 0 120 8">
+                    <line x1="0" y1="4" x2="50" y2="4" stroke="currentColor" stroke-width="0.6" />
+                    <path d="M60 0 L63 4 L60 8 L57 4 Z" fill="currentColor" />
+                    <line x1="70" y1="4" x2="120" y2="4" stroke="currentColor" stroke-width="0.6" />
+                </svg>
+            </div>
 
             <form id="rsvpForm" class="rsvp-form" novalidate>
                 <label class="field">
                     <span class="field-label">Nombre del invitado</span>
                     <input type="text" name="nombre" required placeholder="Tu nombre completo" autocomplete="name">
-                    <span class="field-line"></span>
                 </label>
 
                 <label class="field">
                     <span class="field-label">Número de asistentes</span>
                     <input type="number" name="asistentes" min="1" max="20" value="1" required>
-                    <span class="field-line"></span>
                 </label>
 
                 <label class="field">
-                    <span class="field-label">Observación <em>opcional</em></span>
-                    <textarea name="observacion" rows="2" placeholder="Alergias, mensaje, comentarios…"></textarea>
-                    <span class="field-line"></span>
+                    <span class="field-label">Observación <em>· opcional</em></span>
+                    <textarea name="observacion" rows="3" placeholder="Alergias, mensaje, comentarios…"></textarea>
                 </label>
 
                 <button type="submit" class="form-submit">
                     <svg viewBox="0 0 24 24" class="wa-icon" aria-hidden="true">
-                        <path d="M20.5 3.5A11.5 11.5 0 0 0 2.5 17.7L1 23l5.5-1.4A11.5 11.5 0 1 0 20.5 3.5Zm-8.5 18a9.5 9.5 0 0 1-4.8-1.3l-.3-.2-3.3.9.9-3.2-.2-.3a9.5 9.5 0 1 1 7.7 4.1Zm5.4-7.1c-.3-.2-1.7-.8-2-.9s-.5-.1-.7.2-.8.9-.9 1.1-.3.2-.6.1-1.3-.5-2.4-1.5c-.9-.8-1.5-1.8-1.7-2.1s0-.4.1-.6l.5-.6c.1-.2.2-.3.3-.5s0-.4 0-.5-.7-1.7-1-2.3-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1.1 2.8 1.2 3 2.1 3.2 5 4.5c.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4s.2-1.2.2-1.3-.3-.2-.6-.4Z" fill="currentColor"/>
+                        <path
+                            d="M20.5 3.5A11.5 11.5 0 0 0 2.5 17.7L1 23l5.5-1.4A11.5 11.5 0 1 0 20.5 3.5Zm-8.5 18a9.5 9.5 0 0 1-4.8-1.3l-.3-.2-3.3.9.9-3.2-.2-.3a9.5 9.5 0 1 1 7.7 4.1Zm5.4-7.1c-.3-.2-1.7-.8-2-.9s-.5-.1-.7.2-.8.9-.9 1.1-.3.2-.6.1-1.3-.5-2.4-1.5c-.9-.8-1.5-1.8-1.7-2.1s0-.4.1-.6l.5-.6c.1-.2.2-.3.3-.5s0-.4 0-.5-.7-1.7-1-2.3-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1.1 2.8 1.2 3 2.1 3.2 5 4.5c.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4s.2-1.2.2-1.3-.3-.2-.6-.4Z"
+                            fill="currentColor" />
                     </svg>
-                    <span>enviar por whatsapp</span>
-                    <span class="submit-arrow" aria-hidden="true">→</span>
+                    <span>Enviar por WhatsApp</span>
                 </button>
             </form>
         </div>
     </div>
 
     <script>
-        // ═══════════════ Motas de luz ═══════════════
-        (function () {
-            const container = document.getElementById('motes');
-            const COUNT = 14;
-            for (let i = 0; i < COUNT; i++) {
-                const m = document.createElement('span');
-                m.className = 'mote';
-                const size = 2 + Math.random() * 6;
-                m.style.cssText = `
-                    --x: ${Math.random() * 100}vw;
-                    --y: ${Math.random() * 100}vh;
-                    --dur: ${22 + Math.random() * 30}s;
-                    --delay: -${Math.random() * 30}s;
-                    --size: ${size}px;
-                    --opacity: ${0.25 + Math.random() * 0.5};
-                `;
-                container.appendChild(m);
-            }
-        })();
-
-        // ═══════════════ Scroll reveal ═══════════════
-        (function () {
-            const scenes = document.querySelectorAll('[data-scene]');
-            const io = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        io.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.18, rootMargin: '0px 0px -10% 0px' });
-            scenes.forEach((s) => io.observe(s));
-        })();
-
-        // ═══════════════ Modal RSVP ═══════════════
         (function () {
             const WHATSAPP_NUMBER = '593987417045';
+
             const modal = document.getElementById('rsvpModal');
             const openBtn = document.getElementById('openRsvp');
             const form = document.getElementById('rsvpForm');
@@ -286,7 +398,7 @@
                 modal.classList.add('is-open');
                 modal.setAttribute('aria-hidden', 'false');
                 document.body.style.overflow = 'hidden';
-                setTimeout(() => form.querySelector('input[name="nombre"]').focus(), 280);
+                setTimeout(() => form.querySelector('input[name="nombre"]').focus(), 250);
             }
 
             function closeModal() {
@@ -307,6 +419,7 @@
                 const nombre = (data.get('nombre') || '').toString().trim();
                 const asistentes = (data.get('asistentes') || '').toString().trim();
                 const observacion = (data.get('observacion') || '').toString().trim();
+
                 if (!nombre || !asistentes) return;
 
                 const lines = [
@@ -318,7 +431,8 @@
                 if (observacion) lines.push(`*Observación:* ${observacion}`);
 
                 const message = encodeURIComponent(lines.join('\n'));
-                window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
+                const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+                window.open(url, '_blank');
                 closeModal();
                 form.reset();
                 form.querySelector('input[name="asistentes"]').value = 1;
@@ -326,4 +440,5 @@
         })();
     </script>
 </body>
+
 </html>
